@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/blue"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Add movie"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/add_movie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/edit_background"
+        android:gravity="start|center"
+        android:hint="Movie name"
+        android:padding="12dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/author_movie"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_actionBar"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <EditText
+        android:id="@+id/author_movie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/edit_background"
+        android:gravity="start|center"
+        android:hint="Movie author"
+        android:padding="12dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/about_movie"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_movie"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <EditText
+        android:id="@+id/about_movie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/edit_background"
+        android:gravity="start"
+        android:hint="About movie"
+        android:padding="12dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/data_movie"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/author_movie"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <EditText
+        android:id="@+id/data_movie"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/edit_background"
+        android:gravity="start|center"
+        android:hint="Movie date"
+        android:inputType="date"
+        android:padding="12dp"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/add_save"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/about_movie"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/add_save"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/blue"
+        android:text="Save"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintWidth_percent="0.3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
